@@ -2,12 +2,11 @@ import cors from 'cors';
 import express from 'express';
 // import mongoose from 'mongoose';
 import config from './config/config';
-import './eventListeners';
+import './functions/eventListeners';
 import { server } from './routers/user-routes';
 
 const app = express();
 const port = config.server.port;
-
 // const corsOptions = {
 // //   origin: 'http://localhost:4200',
 //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
