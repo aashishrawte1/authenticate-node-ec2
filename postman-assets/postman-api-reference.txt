@@ -1,0 +1,44 @@
+1. update ticket status
+    a. endpoint: http://localhost:3000/update
+    b. method: PUT
+    c. body: 
+        {
+            "seatNumber": 1,
+            "isOpen": false,
+            "userDetails": {
+                "name": "Aashish Rawte",
+                "email": "aashishrawte1@gmail.com"
+            }
+        }
+
+2. view ticket status
+    a. endpoint: http://localhost:3000/status/1
+    b. method: GET
+
+3. view all closed tickets
+    a. endpoint: http://localhost:3000/closed
+    b. method: GET
+
+4. view all open tickets
+    a. endpoint: http://localhost:3000/open
+    b. method: GET
+
+5. view details of the person owning the ticket
+    a. endpoint: http://localhost:3000/details/1
+    b. method: GET
+
+6. create a ticket for user
+    a. endpoint: http://localhost:3000/create-ticket
+    b. method: POST
+    c. body: 
+        {
+            "seatNumber": 2,
+            "userDetails": {
+                "name": "Aashish Rawte",
+                "email": "aashishrawte1@gmail.com"
+            }
+        }
+
+7. reset the server
+    a. endpoint: http://localhost:3000/reset
+    b. method: POST

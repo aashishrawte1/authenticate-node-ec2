@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d714a64e-6f1a-429b-b2f6-065dd2f6bd9b",
+		"name": "Authenticate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13998593",
+		"_collection_link": "https://aashishrawte1.postman.co/workspace/aashishrawte1~cd5dba2d-f796-4e81-909d-5414d7b53c2d/collection/13998593-d714a64e-6f1a-429b-b2f6-065dd2f6bd9b?action=share&source=collection_link&creator=13998593"
+	},
+	"item": [
+		{
+			"name": "reset-server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seatNumber\": 2,\n    \"userDetails\": {\n        \"name\": \"Jane Doe\",\n        \"email\": \"jane.doe@example.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-status",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "check-all-closed-ticket",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "check-all-open-ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/open",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-person-ticket-detail",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update-ticket-status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seatNumber\": 2,\n    \"isOpen\": true,\n    \"userDetails\": {\n        \"name\": \"Aashish Rawte\",\n        \"email\": \"aashishrawte1@gmail.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
