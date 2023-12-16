@@ -9,7 +9,7 @@
     "debug:server": "nodemon dist/app.js",
     "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pm2-start": "pm2 start dist/app.js --name authenticate",
+    "pm2-start": "tsc && pm2 start dist/app.js --name authenticate",
     "pm2-monit": "pm2 monit",
     "pm2-list": "pm2 list",
     "pm2-stop": "pm2 stop authenticate"
