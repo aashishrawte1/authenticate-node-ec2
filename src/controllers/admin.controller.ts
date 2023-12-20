@@ -7,7 +7,7 @@ import { connect } from "../utils/db.util";
 export const resetServer  = async(req: any, res: any) => {
     try {
         await connect();
-        await Ticket.updateMany({}, {isOpen: true, userDetails: undefined});
+        await Ticket.updateMany({}, {isOpen: true, userDetails: {}});
         res.json({ message: 'Server reset successfully'});
     } catch (error) {
         res.status(500).json({ error: error.message });

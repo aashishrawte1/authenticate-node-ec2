@@ -119,8 +119,10 @@ export const createTicket = async(req: Request, res: Response) => {
     }
 
     const existingTicket = await Ticket.findOne({ seatNumber });
-    if(existingTicket) {
+    if(existingTicket && existingTicket.isOpen == false) {
       return res.status(400).json({ error: 'Seat is already occupied' });
+    } else if(existingTicket && existingTicket.isOpen) {
+      await Ticket.deleteMany({ seatNumber });
     }
 
     const totalBookedSeats = await Ticket.countDocuments({ isOpen: false });
@@ -133,14 +135,14 @@ export const createTicket = async(req: Request, res: Response) => {
       return res.status(400).json({ error: 'User details are required to create a ticket' });
     }
 
-    const ticket = new Ticket({
-      seatNumber,
-      isOpen: true,
-      userDetails
-    });
-
-    await ticket.save();
-
+      const ticket = new Ticket({
+        seatNumber,
+        isOpen: false,
+        userDetails
+      });
+  
+      await ticket.save();
+    
     eventEmitter.emit('ticketCreated', ticket);
 
     res.json(ticket);

@@ -24,6 +24,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.listen(80, () => {
+app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });

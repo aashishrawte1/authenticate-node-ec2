@@ -14,15 +14,15 @@ export const server = express.Router()
 const routes = {
 
     // admin routes
-    reset: '/reset',
+    reset: '/admin/reset',
 
     // ticket routes
-    update: '/update', // update ticket status
-    'seat-status': '/status/:seatNumber', // view ticket status
-    closed: '/closed', // all closed tickets
-    open: '/open', // all open tickets
-    details: '/details/:seatNumber', // details of person and ticket
-    'create-ticket': '/create-ticket', // create ticket
+    update: '/user/update', // update ticket status
+    'seat-status': '/user/status/:seatNumber', // view ticket status
+    closed: '/user/closed', // all closed tickets
+    open: '/user/open', // all open tickets
+    details: '/user/details/:seatNumber', // details of person and ticket
+    'create-ticket': '/user/create-ticket', // create ticket
 
 
 }
