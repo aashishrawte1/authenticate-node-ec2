@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "f94a3963-11f8-4516-b6b5-04c026cf0a03",
+		"name": "Authenticate-ec2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13998593",
+		"_collection_link": "https://aashishrawte1.postman.co/workspace/aashishrawte1~cd5dba2d-f796-4e81-909d-5414d7b53c2d/collection/13998593-f94a3963-11f8-4516-b6b5-04c026cf0a03?action=share&source=collection_link&creator=13998593"
+	},
+	"item": [
+		{
+			"name": "reset-server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://13.53.107.36/admin/reset",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"admin",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seatNumber\": 5,\n    \"userDetails\": {\n        \"name\": \"max Doe\",\n        \"email\": \"max.doe@example.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.53.107.36/user/create-ticket",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"create-ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.53.107.36/user/status/4",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"status",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-all-closed-ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.53.107.36/user/closed",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"closed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-all-open-ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.53.107.36/user/open",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-person-ticket-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.53.107.36/user/details/5",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"details",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-ticket-status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seatNumber\": 2,\n    \"isOpen\": true,\n    \"userDetails\": {\n        \"name\": \"Aashish Rawte\",\n        \"email\": \"aashishrawte1@gmail.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.53.107.36/user/update",
+					"protocol": "http",
+					"host": [
+						"13",
+						"53",
+						"107",
+						"36"
+					],
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
