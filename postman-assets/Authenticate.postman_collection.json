@@ -13,13 +13,14 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/reset",
+					"raw": "http://localhost:80/admin/reset",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "80",
 					"path": [
+						"admin",
 						"reset"
 					]
 				}
@@ -33,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"seatNumber\": 2,\n    \"userDetails\": {\n        \"name\": \"Jane Doe\",\n        \"email\": \"jane.doe@example.com\"\n    }\n}",
+					"raw": "{\n    \"seatNumber\": 5,\n    \"userDetails\": {\n        \"name\": \"max Doe\",\n        \"email\": \"max.doe@example.com\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,13 +42,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/create-ticket",
+					"raw": "http://localhost:80/user/create-ticket",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "80",
 					"path": [
+						"user",
 						"create-ticket"
 					]
 				}
@@ -58,7 +60,20 @@
 			"name": "check-status",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/user/status/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"user",
+						"status",
+						"4"
+					]
+				}
 			},
 			"response": []
 		},
@@ -66,7 +81,19 @@
 			"name": "check-all-closed-ticket",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/user/closed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"user",
+						"closed"
+					]
+				}
 			},
 			"response": []
 		},
@@ -76,13 +103,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/open",
+					"raw": "http://localhost:80/user/open",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "80",
 					"path": [
+						"user",
 						"open"
 					]
 				}
@@ -93,7 +121,20 @@
 			"name": "check-person-ticket-detail",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/user/details/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"user",
+						"details",
+						"5"
+					]
+				}
 			},
 			"response": []
 		},
@@ -112,13 +153,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/update",
+					"raw": "http://localhost:80/user/update",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "80",
 					"path": [
+						"user",
 						"update"
 					]
 				}

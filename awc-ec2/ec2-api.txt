@@ -1,9 +1,9 @@
 ec2_endpoint: 
-    IP: http://13.53.107.36/open
-    DNS: ec2-13-53-107-36.eu-north-1.compute.amazonaws.com:80/open  
+    IP: http://13.53.107.36/user/open
+    DNS: ec2-13-53-107-36.eu-north-1.compute.amazonaws.com:80/user/open  
 
 1. update ticket status
-    a. endpoint: http://13.53.107.36/update
+    a. endpoint: http://13.53.107.36/user/update
     b. method: PUT
     c. body: 
         {
@@ -16,23 +16,23 @@ ec2_endpoint:
         }
 
 2. view ticket status
-    a. endpoint: http://13.53.107.36/status/1
+    a. endpoint: http://13.53.107.36/user/status/1
     b. method: GET
 
 3. view all closed tickets
-    a. endpoint: http://13.53.107.36/closed
+    a. endpoint: http://13.53.107.36/user/closed
     b. method: GET
 
 4. view all open tickets
-    a. endpoint: http://13.53.107.36/open
+    a. endpoint: http://13.53.107.36/user/open
     b. method: GET
 
 5. view details of the person owning the ticket
-    a. endpoint: http://13.53.107.36/details/1
+    a. endpoint: http://13.53.107.36/user/details/1
     b. method: GET
 
 6. create a ticket for user
-    a. endpoint: http://13.53.107.36/create-ticket
+    a. endpoint: http://13.53.107.36/user/create-ticket
     b. method: POST
     c. body: 
         {
@@ -44,5 +44,5 @@ ec2_endpoint:
         }
 
 7. reset the server
-    a. endpoint: http://13.53.107.36/reset
+    a. endpoint: http://13.53.107.36/admin/reset
     b. method: POST
